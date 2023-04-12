@@ -1,6 +1,9 @@
 #NoEnv
 SendMode Input
 
+; Abre o link (substitua "URL_DO_LINK" pelo link desejado)
+;Run "https://twitter.com/amora44721612"
+
 ; Solicita ao usuário que insira a URL
 InputBox, url, Digite a URL, Por favor insira a URL do Twitter:
 
@@ -15,28 +18,28 @@ if url =
 Run %url%
 
 ; Aguarda 2 segundos para a página carregar completamente
-Sleep, 2000
+Sleep, 3000
 
 ; Pressiona a tecla F5 para atualizar a página
 Send {F5}
-Sleep, 2000
+Sleep, 3000
 
 ; Pressiona a tecla Tab 18 vezes até chegar nos ...
 Loop, 18
 {
     Send {Tab}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Pressiona a tecla Enter para entrar nos ...
 Send {Enter}
-Sleep, 2000
+Sleep, 3000
 
 ; Pressiona a tecla Tab 8 vezes para chegar em denunciar perfil
 Loop, 8
 {
     Send {Tab}
-    Sleep, 100		
+    Sleep, 200		
 }
 
 ; Pressiona a tecla Enter para entrar em denunciar perfil
@@ -47,7 +50,7 @@ Sleep, 2000
 Loop, 2
 {
     Send {Tab}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Pressiona a tecla Enter para chegar na tela Para quem é esta denuncia	
@@ -58,14 +61,14 @@ Sleep, 2000
 Loop, 2
 {
     Send {Tab}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Pressiona a tecla seta p		ara baixo 2 vezes para chegar em todos no Twitter
 Loop, 2
 {
     Send {Down}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Pressiona a tecla Tab para chegar em Próximo
@@ -79,7 +82,7 @@ Sleep, 200
 Loop, 2
 {
     Send {Tab}
-    Sleep, 100
+    Sleep, 200
 }
 
 ; Pressiona a tecla Seta Baixo para chegar em Alvo de assédios ou intimidado com violência
@@ -94,27 +97,27 @@ Sleep, 200
 Loop, 2
 {
     Send {Tab}
-    Sleep, 100
+    Sleep, 200
 }
 
 Loop, 10
 {
     Send {Down}
-    Sleep, 100
+    Sleep, 200
 }
 
 Send {Tab}
 
 Send {Enter}
-Sleep, 300
+Sleep, 3000
 Send {Tab 2}
 Send {Down 2}
 Send {Tab}
 Send {Enter}
-Sleep, 200
+Sleep, 2000
 Send {Tab 4}
 Send {Enter}
-Sleep, 200
+Sleep, 2000
 Send {Tab 3}
 Send {Enter}
 
