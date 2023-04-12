@@ -1,0 +1,123 @@
+#NoEnv
+SendMode Input
+
+; Solicita ao usuário que insira a URL
+InputBox, url, Digite a URL, Por favor insira a URL do Twitter:
+
+; Verifica se o usuário pressionou "Cancelar"
+if url = 
+{
+    MsgBox, Nenhuma URL foi inserida. O script será encerrado.
+    ExitApp
+}
+
+; Abre a URL digitada pelo usuário
+Run %url%
+
+; Aguarda 2 segundos para a página carregar completamente
+Sleep, 2000
+
+; Pressiona a tecla F5 para atualizar a página
+Send {F5}
+Sleep, 2000
+
+; Pressiona a tecla Tab 18 vezes até chegar nos ...
+Loop, 18
+{
+    Send {Tab}
+    Sleep, 100
+}
+
+; Pressiona a tecla Enter para entrar nos ...
+Send {Enter}
+Sleep, 2000
+
+; Pressiona a tecla Tab 8 vezes para chegar em denunciar perfil
+Loop, 8
+{
+    Send {Tab}
+    Sleep, 100		
+}
+
+; Pressiona a tecla Enter para entrar em denunciar perfil
+Send {Enter}
+Sleep, 2000
+
+; Pressiona a tecla Tab 2 vezes para chegar na tela Para quem é esta denuncia
+Loop, 2
+{
+    Send {Tab}
+    Sleep, 100
+}
+
+; Pressiona a tecla Enter para chegar na tela Para quem é esta denuncia	
+Send {Enter}
+Sleep, 2000
+
+; Pressiona a tecla Tab 2 vezes para chegar em todos no Twitter
+Loop, 2
+{
+    Send {Tab}
+    Sleep, 100
+}
+
+; Pressiona a tecla seta p		ara baixo 2 vezes para chegar em todos no Twitter
+Loop, 2
+{
+    Send {Down}
+    Sleep, 100
+}
+
+; Pressiona a tecla Tab para chegar em Próximo
+Send {Tab}
+
+; Pressiona a tecla Enter para chegar em O que está acontecendo no Twitter
+Send {Enter}
+Sleep, 200
+
+; Pressiona a tecla Tab para chegar em Alvo de assédios ou intimidado com violência
+Loop, 2
+{
+    Send {Tab}
+    Sleep, 100
+}
+
+; Pressiona a tecla Seta Baixo para chegar em Alvo de assédios ou intimidado com violência
+
+Send {Down}
+
+Send {Tab}
+
+Send {Enter}
+Sleep, 200
+
+Loop, 2
+{
+    Send {Tab}
+    Sleep, 100
+}
+
+Loop, 10
+{
+    Send {Down}
+    Sleep, 100
+}
+
+Send {Tab}
+
+Send {Enter}
+Sleep, 300
+Send {Tab 2}
+Send {Down 2}
+Send {Tab}
+Send {Enter}
+Sleep, 200
+Send {Tab 4}
+Send {Enter}
+Sleep, 200
+Send {Tab 3}
+Send {Enter}
+
+
+
+; Fim do script
